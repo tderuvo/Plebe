@@ -1,4 +1,18 @@
 Plebe::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/help"
+
+  get "pages/profile"
+
+  get "pages/signout"
+
+  get "pages/about"
+
+  get "pages/support"
+
+  get "pages/developers"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
