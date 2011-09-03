@@ -1,5 +1,7 @@
 Plebe::Application.routes.draw do
   
+  get "users/new"
+
   root :to => 'pages#home'
   
   match '/help', :to => 'pages#help'
@@ -8,6 +10,7 @@ Plebe::Application.routes.draw do
   match '/about', :to => 'pages#about'
   match '/support', :to => 'pages#support'
   match '/developers', :to => 'pages#developers'
+  match '/signup', :to => 'users#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
