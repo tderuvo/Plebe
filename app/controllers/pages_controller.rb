@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
     @title = "Home"
+    @comingsoon = "1"
   end
 
   def help
@@ -25,6 +26,11 @@ class PagesController < ApplicationController
 
   def developers
     @title = "Developers"
+  end
+  
+  def comingsoon
+    render :layout => false
+    @title = "Home"
   end
 
 end
