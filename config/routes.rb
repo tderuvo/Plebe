@@ -1,6 +1,7 @@
 Plebe::Application.routes.draw do
   
-  get "users/new"
+  resources :users
+  # get "users/new"
 
   # this statement is the original but will try to have a coming soon page
   root :to => 'pages#home'
