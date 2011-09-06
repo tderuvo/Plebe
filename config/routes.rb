@@ -3,8 +3,8 @@ Plebe::Application.routes.draw do
   get "users/new"
 
   # this statement is the original but will try to have a coming soon page
-  # root :to => 'pages#home'
-  root :to => 'pages#comingsoon'
+  root :to => 'pages#home'
+  # root :to => 'pages#comingsoon'
   
   match '/help', :to => 'pages#help'
   match '/profile', :to => 'pages#profile'
@@ -13,7 +13,8 @@ Plebe::Application.routes.draw do
   match '/support', :to => 'pages#support'
   match '/developers', :to => 'pages#developers'
   match '/signup', :to => 'users#new'
-  match '/home', :to => 'pages#home'
+  # match '/home', :to => 'pages#home'
+  match '/comingsoon', :to => 'pages#comingsoon'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
