@@ -1,21 +1,24 @@
 Plebe::Application.routes.draw do
   
-  resources :users
-  # get "users/new"
+
+  resources :users   # get "users/new"
+  resources :sessions, :only => [:new, :create, :destroy]
 
   # this statement is the original but will try to have a coming soon page
   root :to => 'pages#home'
   # root :to => 'pages#comingsoon'
   
-  match '/help', :to => 'pages#help'
-  match '/profile', :to => 'pages#profile'
-  match '/signout', :to => 'pages#signout'
-  match '/about', :to => 'pages#about'
-  match '/support', :to => 'pages#support'
-  match '/developers', :to => 'pages#developers'
-  match '/signup', :to => 'users#new'
+  match '/help',        :to => 'pages#help'
+  match '/profile',     :to => 'pages#profile'
+  match '/signout',     :to => 'pages#signout'
+  match '/about',       :to => 'pages#about'
+  match '/support',     :to => 'pages#support'
+  match '/developers',  :to => 'pages#developers'
+  match '/signup',      :to => 'users#new'
   # match '/home', :to => 'pages#home'
-  match '/comingsoon', :to => 'pages#comingsoon'
+  match '/comingsoon',  :to => 'pages#comingsoon'
+  match '/signin',      :to => 'sessions#new'
+  match '/signout',     :to => 'sessions#destroy'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
