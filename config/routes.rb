@@ -10,7 +10,6 @@ Plebe::Application.routes.draw do
   
   match '/help',        :to => 'pages#help'
   match '/profile',     :to => 'pages#profile'
-  match '/signout',     :to => 'pages#signout'
   match '/about',       :to => 'pages#about'
   match '/support',     :to => 'pages#support'
   match '/developers',  :to => 'pages#developers'

@@ -42,19 +42,6 @@ describe PagesController do
     end
   end
 
-  describe "GET 'signout'" do
-    it "should be successful" do
-      get 'signout'
-      response.should be_success
-    end
-    
-    it "should have the right title" do
-      get 'signout'
-      response.should have_selector("title",
-                                   :content => "Plebe | Sign out")
-    end
-  end
-
   describe "GET 'about'" do
     it "should be successful" do
       get 'about'

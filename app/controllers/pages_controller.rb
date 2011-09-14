@@ -12,10 +12,6 @@ class PagesController < ApplicationController
     @title = "Profile"
   end
 
-  def signout
-    @title = "Sign out"
-  end
-
   def about
     @title = "About"
   end
